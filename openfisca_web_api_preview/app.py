@@ -112,8 +112,8 @@ def create_app(country_package = os.environ.get('COUNTRY_PACKAGE'),
             entity_result = result[entity_index]
 
             variable = tax_benefit_system.get_column(variable_name)
-            if isinstance(variable, EnumCol):
-                entity_result = variable.enum._vars[entity_result]
+            if variable.value_type == 'Enum':
+                entity_result = variable.possible_values._vars[entity_result]
 
             dpath.util.set(input_data, path, entity_result)
 
