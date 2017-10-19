@@ -8,6 +8,7 @@ from flask_cors import CORS
 import dpath
 
 from openfisca_core.simulations import Simulation, SituationParsingError
+from openfisca_core.enumerations import Enum
 from loader import build_data
 import traceback
 import logging
@@ -112,7 +113,7 @@ def create_app(country_package = os.environ.get('COUNTRY_PACKAGE'),
             entity_result = result[entity_index]
 
             variable = tax_benefit_system.get_variable(variable_name)
-            if variable.value_type == 'Enum':
+            if variable.value_type == Enum:
                 entity_result = variable.possible_values._vars[entity_result]
 
             dpath.util.set(input_data, path, entity_result)
