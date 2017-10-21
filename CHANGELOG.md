@@ -169,6 +169,8 @@ class salary(Variable):
 salary_variable = salary()
 ```
 
+You can learn more about `Variable` by checking its [reference documentation](http://openfisca.readthedocs.io/en/latest/variables.html).
+
 ## 18.1.0 [#578](https://github.com/openfisca/openfisca-core/pull/578)
 
 #### New features
