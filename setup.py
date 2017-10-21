@@ -32,7 +32,7 @@ setup(
         'test': [
             'nose',
             'flake8',
-            'openfisca-country-template == 1.3.1',
+            'openfisca-country-template >= 1.4.0a0, <= 1.4.0',
             'openfisca-extension-template == 1.1.1',
             ],
         'tracker': [
