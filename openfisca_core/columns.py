@@ -9,7 +9,6 @@ from biryani import strings
 import numpy as np
 
 from . import conv, periods
-from .enumerations import Enum
 
 
 def N_(message):
@@ -311,10 +310,11 @@ class AgeCol(IntCol):
             )
 
 
-class EnumCol(IntCol):
+class EnumCol(Column):
     '''
     A column of integer with an enum
     '''
+
     index_by_slug = None
 
     @property
